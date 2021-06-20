@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/screens/signUp/components/signUpForm.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/screens/signUp/components/signUpForm.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class SignUpPage extends StatelessWidget {
   // Translations().translate["splash data"]

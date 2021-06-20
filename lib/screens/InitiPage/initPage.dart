@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/screens/walkthrough/walkthrough.dart';
+import 'package:beaullo/screens/walkthrough/walkthrough.dart';
 
 class InitPage extends StatefulWidget {
   @override

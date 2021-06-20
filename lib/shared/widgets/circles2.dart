@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class Circle2 extends StatelessWidget {
   final double radius;

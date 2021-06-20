@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/screens/dashboard/dashboard.dart';
-import 'package:nawali/screens/more/more.dart';
-import 'package:nawali/screens/payments/payments.dart';
-import 'package:nawali/screens/transferMoney/transfermoney.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/shared/widgets/circles.dart';
-import 'package:nawali/shared/components/navCard.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/screens/dashboard/dashboard.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/shared/widgets/circles.dart';
+import 'package:beaullo/shared/components/navCard.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class TabsPage extends StatelessWidget {
   @override

@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/routes/pagesRoute.dart';
-import 'package:nawali/screens/login/login.dart';
-import 'package:nawali/screens/signUp/signUp.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/shared/widgets/circles2.dart';
-import 'package:nawali/shared/widgets/circles3.dart';
-import 'package:nawali/shared/widgets/default_button.dart';
-import 'package:nawali/shared/widgets/icon_button.dart';
-import 'package:nawali/shared/widgets/outline_button.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/routes/pagesRoute.dart';
+import 'package:beaullo/screens/login/login.dart';
+import 'package:beaullo/screens/signUp/signUp.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/shared/widgets/circles2.dart';
+import 'package:beaullo/shared/widgets/circles3.dart';
+import 'package:beaullo/shared/widgets/default_button.dart';
+import 'package:beaullo/shared/widgets/icon_button.dart';
+import 'package:beaullo/shared/widgets/outline_button.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class GetStartedPage extends StatelessWidget {
   @override
