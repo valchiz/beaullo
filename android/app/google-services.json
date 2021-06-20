@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1009682600749",
+    "project_id": "na-wali-b7671",
+    "storage_bucket": "na-wali-b7671.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009682600749:android:7411a2d23f97678eeef9a4",
+        "android_client_info": {
+          "package_name": "com.example.nawali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009682600749-b2uk4sq3k3sg82iub0tgcean0m0s9fll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTVTHhEsDu65_U1_mDHpyBL5d6Zs9KX0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1009682600749-b2uk4sq3k3sg82iub0tgcean0m0s9fll.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
