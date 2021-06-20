@@ -89,16 +89,17 @@ class Dashboard extends StatelessWidget {
                       child: Container(
                         color: Colors.white,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              width: Dimensions().getWidth(context, 40),
-                              height: Dimensions().getHeight(context, 40),
+                              width: Dimensions().getWidth(context, 10),
+                              height: Dimensions().getHeight(context, 10),
                               decoration: BoxDecoration(
                                 color: Colors.grey,
-                                shape: BoxShape.rectangle,
+                                shape: BoxShape.circle,
                                 image: DecorationImage(
                                   image:
-                                      AssetImage('assets/images/google.jpeg'),
+                                      AssetImage('assets/images/larporte.jpeg'),
                                   fit: BoxFit.contain,
                                 ),
                               ),
@@ -115,19 +116,20 @@ class Dashboard extends StatelessWidget {
                       child: Container(
                         color: Colors.white,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              width: Dimensions().getWidth(context, 40),
-                              height: Dimensions().getHeight(context, 40),
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                shape: BoxShape.rectangle,
-                                image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/google.jpeg'),
-                                  fit: BoxFit.contain,
-                                ),
-                              ),
+                              width: Dimensions().getWidth(context, 10),
+                              height: Dimensions().getHeight(context, 10),
+                              // decoration: BoxDecoration(
+                              //   color: Colors.grey,
+                              //   shape: BoxShape.rectangle,
+                              //   image: DecorationImage(
+                              //     image:
+                              //         AssetImage('assets/images/google.jpeg'),
+                              //     fit: BoxFit.contain,
+                              //   ),
+                              // ),
                             ),
                             TextThemeSheet().transcTitleText('Item Desc'),
                             TextThemeSheet().smallCardText('NGN 5,000'),
@@ -141,19 +143,20 @@ class Dashboard extends StatelessWidget {
                       child: Container(
                         color: Colors.white,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              width: Dimensions().getWidth(context, 40),
-                              height: Dimensions().getHeight(context, 40),
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                shape: BoxShape.rectangle,
-                                image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/google.jpeg'),
-                                  fit: BoxFit.contain,
-                                ),
-                              ),
+                              width: Dimensions().getWidth(context, 10),
+                              height: Dimensions().getHeight(context, 10),
+                              // decoration: BoxDecoration(
+                              //   color: Colors.grey,
+                              //   shape: BoxShape.rectangle,
+                              //   image: DecorationImage(
+                              //     image:
+                              //         AssetImage('assets/images/google.jpeg'),
+                              //     fit: BoxFit.contain,
+                              //   ),
+                              // ),
                             ),
                             TextThemeSheet().transcTitleText('Item Desc'),
                             TextThemeSheet().smallCardText('NGN 5,000'),
@@ -167,19 +170,20 @@ class Dashboard extends StatelessWidget {
                       child: Container(
                         color: Colors.white,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Container(
-                              width: Dimensions().getWidth(context, 40),
-                              height: Dimensions().getHeight(context, 40),
-                              decoration: BoxDecoration(
-                                color: Colors.grey,
-                                shape: BoxShape.rectangle,
-                                image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/images/google.jpeg'),
-                                  fit: BoxFit.contain,
-                                ),
-                              ),
+                              width: Dimensions().getWidth(context, 10),
+                              height: Dimensions().getHeight(context, 10),
+                              // decoration: BoxDecoration(
+                              //   color: Colors.grey,
+                              //   shape: BoxShape.rectangle,
+                              //   image: DecorationImage(
+                              //     image:
+                              //         AssetImage('assets/images/google.jpeg'),
+                              //     fit: BoxFit.contain,
+                              //   ),
+                              // ),
                             ),
                             TextThemeSheet().transcTitleText('Item Desc'),
                             TextThemeSheet().smallCardText('NGN 5,000'),
