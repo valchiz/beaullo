@@ -121,15 +121,15 @@ class Dashboard extends StatelessWidget {
                             Container(
                               width: Dimensions().getWidth(context, 10),
                               height: Dimensions().getHeight(context, 10),
-                              // decoration: BoxDecoration(
-                              //   color: Colors.grey,
-                              //   shape: BoxShape.rectangle,
-                              //   image: DecorationImage(
-                              //     image:
-                              //         AssetImage('assets/images/google.jpeg'),
-                              //     fit: BoxFit.contain,
-                              //   ),
-                              // ),
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/larporte.jpeg'),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
                             ),
                             TextThemeSheet().transcTitleText('Item Desc'),
                             TextThemeSheet().smallCardText('NGN 5,000'),
@@ -148,15 +148,15 @@ class Dashboard extends StatelessWidget {
                             Container(
                               width: Dimensions().getWidth(context, 10),
                               height: Dimensions().getHeight(context, 10),
-                              // decoration: BoxDecoration(
-                              //   color: Colors.grey,
-                              //   shape: BoxShape.rectangle,
-                              //   image: DecorationImage(
-                              //     image:
-                              //         AssetImage('assets/images/google.jpeg'),
-                              //     fit: BoxFit.contain,
-                              //   ),
-                              // ),
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/larporte.jpeg'),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
                             ),
                             TextThemeSheet().transcTitleText('Item Desc'),
                             TextThemeSheet().smallCardText('NGN 5,000'),
@@ -175,15 +175,15 @@ class Dashboard extends StatelessWidget {
                             Container(
                               width: Dimensions().getWidth(context, 10),
                               height: Dimensions().getHeight(context, 10),
-                              // decoration: BoxDecoration(
-                              //   color: Colors.grey,
-                              //   shape: BoxShape.rectangle,
-                              //   image: DecorationImage(
-                              //     image:
-                              //         AssetImage('assets/images/google.jpeg'),
-                              //     fit: BoxFit.contain,
-                              //   ),
-                              // ),
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                shape: BoxShape.circle,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/larporte.jpeg'),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
                             ),
                             TextThemeSheet().transcTitleText('Item Desc'),
                             TextThemeSheet().smallCardText('NGN 5,000'),
