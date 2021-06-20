@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:beaullo/screens/dashboard/dashboard.dart';
+import 'package:beaullo/screens/cart/cart.dart';
+import 'package:beaullo/screens/userProfile/userProfile.dart';
+import 'package:beaullo/screens/favourites/favourites.dart';
 import 'package:beaullo/shared/services/translationService.dart';
 import 'package:beaullo/shared/widgets/circles.dart';
 import 'package:beaullo/shared/components/navCard.dart';
@@ -25,28 +28,27 @@ class TabsPage extends StatelessWidget {
                 text: Translations().translate["tab1"],
               ),
               Tab(
-                icon: Icon(Icons.payment),
+                icon: Icon(Icons.favorite),
                 text: Translations().translate["tab2"],
               ),
               Tab(
-                icon: Icon(Icons.transfer_within_a_station),
+                icon: Icon(Icons.shopping_cart),
                 text: Translations().translate["tab3"],
               ),
               Tab(
-                icon: Icon(Icons.more),
+                icon: Icon(Icons.person),
                 text: Translations().translate["tab4"],
               ),
             ],
           ),
           body: TabBarView(
             children: [
-              // Dashboard(
-              //   title: 'Dashboard',
-              // ),
-              // Payments(),
-              // TransferMoney(),
-              // // Center(child: Text('Transfers Content Here')),
-              // More(),
+              Dashboard(
+                title: 'Dashboard',
+              ),
+              Favourites(),
+              Cart(),
+              UserProfile(),
             ],
           ),
         ),

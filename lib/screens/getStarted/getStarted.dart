@@ -23,7 +23,9 @@ class GetStartedPage extends StatelessWidget {
           SizedBox(
             height: Dimensions().getHeight(context, 10),
           ),
-          Circle3(radius: 25, url: 'assets/images/196px.png'),
+          Circle3(radius: 25, url: 'assets/images/larporte.jpeg'),
+          // Beaullo logo is required of size 196 x 196 px and should be save in this exact path
+          // assets/images/196px.png
           SizedBox(
             height: Dimensions().getHeight(context, 8),
           ),

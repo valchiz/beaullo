@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1009682600749",
-    "project_id": "na-wali-b7671",
-    "storage_bucket": "na-wali-b7671.appspot.com"
+    "project_number": "563825392549",
+    "project_id": "beaullo-mobile",
+    "storage_bucket": "beaullo-mobile.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1009682600749:android:7411a2d23f97678eeef9a4",
+        "mobilesdk_app_id": "1:563825392549:android:e24fd9a354b891415fc64c",
         "android_client_info": {
-          "package_name": "com.example.nawali"
+          "package_name": "com.example.beaullo"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1009682600749-b2uk4sq3k3sg82iub0tgcean0m0s9fll.apps.googleusercontent.com",
+          "client_id": "563825392549-obooeke16v1t8etcb4pikileehsg8s3n.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDTVTHhEsDu65_U1_mDHpyBL5d6Zs9KX0M"
+          "current_key": "AIzaSyDXw866xriKrdAvVRVNStMQ_0khYd-_8Sc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1009682600749-b2uk4sq3k3sg82iub0tgcean0m0s9fll.apps.googleusercontent.com",
+              "client_id": "563825392549-obooeke16v1t8etcb4pikileehsg8s3n.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

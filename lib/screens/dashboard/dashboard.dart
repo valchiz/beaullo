@@ -76,147 +76,120 @@ class Dashboard extends StatelessWidget {
             SizedBox(
               height: Dimensions().getHeight(context, 4),
             ),
-            TextThemeSheet().largeSectionText('Account Balance'),
-            TextThemeSheet().balance('\$24,000.00'),
-            SizedBox(
-              height: Dimensions().getHeight(context, 2),
-            ),
+            //
             Expanded(
-                child: ListView(
-              children: [
-                Container(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+              child: GridView.count(
+                  // Create a grid with 2 columns. If you change the scrollDirection to
+                  // horizontal, this produces 2 rows.
+                  crossAxisCount: 2,
+                  // Generate 100 widgets that display their index in the List.
                   children: [
-                    TextThemeSheet().smallThinText('10 May 2021'),
-                    SizedBox(
-                      height: Dimensions().getHeight(context, 2),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: Container(
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            Container(
+                              width: Dimensions().getWidth(context, 40),
+                              height: Dimensions().getHeight(context, 40),
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                shape: BoxShape.rectangle,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/google.jpeg'),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            TextThemeSheet().transcTitleText('Item Desc'),
+                            TextThemeSheet().smallCardText('NGN 5,000'),
+                            Icon(Icons.shopping_cart),
+                          ],
+                        ),
+                      ),
                     ),
                     Container(
-                      color: Colors.white,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          ListTile(
-                            leading: Container(
-                                padding: EdgeInsets.all(1),
-                                width: Dimensions().getWidth(context, 10),
-                                child: Circle(
-                                    radius: 5,
-                                    url: 'assets/images/google.jpeg')),
-                            title: TextThemeSheet()
-                                .transcTitleText('Akinsiende Ifeoluwa'),
-                            subtitle: Container(
-                                width: Dimensions().getWidth(context, 30),
-                                child: TextThemeSheet()
-                                    .transcTimeText('00:34 AM')),
-                            trailing:
-                                TextThemeSheet().transcCreditText('\$1,500.00'),
-                          ),
-                          Container(
-                            width: Dimensions().getWidth(context, 75),
-                            child: Divider(),
-                          ),
-                          ListTile(
-                            leading: Container(
-                                padding: EdgeInsets.all(1),
-                                width: Dimensions().getWidth(context, 10),
-                                child: Circle(
-                                    radius: 5,
-                                    url: 'assets/images/google.jpeg')),
-                            title:
-                                TextThemeSheet().transcTitleText('Shiek Lafey'),
-                            subtitle: Container(
-                                width: Dimensions().getWidth(context, 30),
-                                child: TextThemeSheet()
-                                    .transcTimeText('10:34 PM')),
-                            trailing:
-                                TextThemeSheet().transcDebitText('\$500.00'),
-                          ),
-                        ],
+                      padding: EdgeInsets.all(10),
+                      child: Container(
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            Container(
+                              width: Dimensions().getWidth(context, 40),
+                              height: Dimensions().getHeight(context, 40),
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                shape: BoxShape.rectangle,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/google.jpeg'),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            TextThemeSheet().transcTitleText('Item Desc'),
+                            TextThemeSheet().smallCardText('NGN 5,000'),
+                            Icon(Icons.shopping_cart),
+                          ],
+                        ),
                       ),
-                    )
-                  ],
-                )),
-                SizedBox(
-                  height: Dimensions().getHeight(context, 4),
-                ),
-                Container(
-                    child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    TextThemeSheet().smallThinText('12 August 2021'),
-                    SizedBox(
-                      height: Dimensions().getHeight(context, 2),
                     ),
                     Container(
-                      color: Colors.white,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          ListTile(
-                            leading: Container(
-                                padding: EdgeInsets.all(1),
-                                width: Dimensions().getWidth(context, 10),
-                                child: Circle(
-                                    radius: 5,
-                                    url: 'assets/images/google.jpeg')),
-                            title: TextThemeSheet()
-                                .transcTitleText('Akin Akasuki'),
-                            subtitle: Container(
-                                width: Dimensions().getWidth(context, 30),
-                                child: TextThemeSheet()
-                                    .transcTimeText('01:34 AM')),
-                            trailing: TextThemeSheet()
-                                .transcCreditText('\$15,500.00'),
-                          ),
-                          Container(
-                            width: Dimensions().getWidth(context, 75),
-                            child: Divider(),
-                          ),
-                          ListTile(
-                            leading: Container(
-                                padding: EdgeInsets.all(1),
-                                width: Dimensions().getWidth(context, 10),
-                                child: Circle(
-                                    radius: 5,
-                                    url: 'assets/images/google.jpeg')),
-                            title: TextThemeSheet()
-                                .transcTitleText('Akinsiende Ifeoluwa'),
-                            subtitle: Container(
-                                width: Dimensions().getWidth(context, 30),
-                                child: TextThemeSheet()
-                                    .transcTimeText('00:34 AM')),
-                            trailing:
-                                TextThemeSheet().transcCreditText('\$1,500.00'),
-                          ),
-                          Container(
-                            width: Dimensions().getWidth(context, 75),
-                            child: Divider(),
-                          ),
-                          ListTile(
-                            leading: Container(
-                                padding: EdgeInsets.all(1),
-                                width: Dimensions().getWidth(context, 10),
-                                child: Circle(
-                                    radius: 5,
-                                    url: 'assets/images/google.jpeg')),
-                            title: TextThemeSheet()
-                                .transcTitleText('Akinsiende Ifeoluwa'),
-                            subtitle: Container(
-                                width: Dimensions().getWidth(context, 30),
-                                child: TextThemeSheet()
-                                    .transcTimeText('00:34 AM')),
-                            trailing:
-                                TextThemeSheet().transcCreditText('\$1,500.00'),
-                          ),
-                        ],
+                      padding: EdgeInsets.all(10),
+                      child: Container(
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            Container(
+                              width: Dimensions().getWidth(context, 40),
+                              height: Dimensions().getHeight(context, 40),
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                shape: BoxShape.rectangle,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/google.jpeg'),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            TextThemeSheet().transcTitleText('Item Desc'),
+                            TextThemeSheet().smallCardText('NGN 5,000'),
+                            Icon(Icons.shopping_cart),
+                          ],
+                        ),
                       ),
-                    )
-                  ],
-                )),
-              ],
-            ))
+                    ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      child: Container(
+                        color: Colors.white,
+                        child: Column(
+                          children: [
+                            Container(
+                              width: Dimensions().getWidth(context, 40),
+                              height: Dimensions().getHeight(context, 40),
+                              decoration: BoxDecoration(
+                                color: Colors.grey,
+                                shape: BoxShape.rectangle,
+                                image: DecorationImage(
+                                  image:
+                                      AssetImage('assets/images/google.jpeg'),
+                                  fit: BoxFit.contain,
+                                ),
+                              ),
+                            ),
+                            TextThemeSheet().transcTitleText('Item Desc'),
+                            TextThemeSheet().smallCardText('NGN 5,000'),
+                            Icon(Icons.shopping_cart),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ]),
+            ),
           ],
         ));
   }
