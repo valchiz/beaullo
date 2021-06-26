@@ -3,7 +3,6 @@ import 'package:beaullo/routes/pagesRoute.dart';
 import 'package:beaullo/screens/getStarted/getStarted.dart';
 import 'package:beaullo/shared/constants.dart';
 import 'package:beaullo/shared/services/translationService.dart';
-import 'package:beaullo/shared/size_config.dart';
 import 'package:beaullo/shared/widgets/default_button.dart';
 import 'package:beaullo/stylesheets/sheet.dart';
 
@@ -93,7 +92,8 @@ class _WalkthroughPageState extends State<WalkthroughPage> {
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-        color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
+        // color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
+        color: currentPage == index ? kPrimaryColor : Color(0xFF4B0082),
         borderRadius: BorderRadius.circular(3),
       ),
     );
