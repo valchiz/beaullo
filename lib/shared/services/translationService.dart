@@ -79,6 +79,9 @@ class Translations {
     "tab4": "Account",
 
     //printing statements and report
-    "date": "DD/MM/YYYY"
+    "date": "DD/MM/YYYY",
+
+    //searcg bar
+    "keyword": "Search",
   };
 }

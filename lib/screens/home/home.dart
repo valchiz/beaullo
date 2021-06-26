@@ -2,10 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:beaullo/screens/dashboard/dashboard.dart';
 import 'package:beaullo/screens/cart/cart.dart';
 import 'package:beaullo/screens/userProfile/userProfile.dart';
-import 'package:beaullo/screens/favourites/favourites.dart';
+import 'package:beaullo/screens/favorites/favorites.dart';
 import 'package:beaullo/shared/services/translationService.dart';
-import 'package:beaullo/shared/widgets/circles.dart';
-import 'package:beaullo/shared/components/navCard.dart';
 import 'package:beaullo/stylesheets/sheet.dart';
 
 class TabsPage extends StatelessWidget {
@@ -32,7 +30,7 @@ class TabsPage extends StatelessWidget {
                 text: Translations().translate["tab2"],
               ),
               Tab(
-                icon: Icon(Icons.shopping_cart),
+                icon: Icon(Icons.shopping_bag),
                 text: Translations().translate["tab3"],
               ),
               Tab(
@@ -46,7 +44,7 @@ class TabsPage extends StatelessWidget {
               Dashboard(
                 title: 'Dashboard',
               ),
-              Favourites(),
+              Favorites(),
               Cart(),
               UserProfile(),
             ],
