@@ -1,11 +1,10 @@
-import 'package:beaullo/screens/dashboard/components/cardLarge.dart';
-import 'package:beaullo/shared/widgets/circles2.dart';
+import 'package:beaullo/screens/explorePage/services/mockData.dart';
 import 'package:flutter/material.dart';
-import 'package:beaullo/shared/services/translationService.dart';
+// import 'package:beaullo/shared/services/translationService.dart';
 import 'package:beaullo/stylesheets/sheet.dart';
 import 'package:beaullo/screens/dashboard/components/searchBar.dart';
 import 'package:beaullo/shared/widgets/header.dart';
-import 'package:beaullo/screens/dashboard/components/cardSmall.dart';
+import 'package:beaullo/screens/explorePage/widgets/itemListing.dart';
 
 import '../../routes/pagesRoute.dart';
 import '../../stylesheets/sheet.dart';
@@ -43,9 +42,6 @@ class _ExplorePageState extends State<ExplorePage> {
               ],
             ),
             Divider(),
-            // SizedBox(
-            //   height: Dimensions().getHeight(context, 1),
-            // ),
             Container(
               width: Dimensions().getWidth(context, 100),
               child: Row(
@@ -60,24 +56,31 @@ class _ExplorePageState extends State<ExplorePage> {
               ),
             ),
             Expanded(
-              child: GridView.count(
-                // Create a grid with 2 columns. If you change the scrollDirection to
-                // horizontal, this produces 2 rows.
-                crossAxisCount: 2,
-                // Generate 100 widgets that display their index in the List.
-                children: [
-                  Container(
-                    width: Dimensions().getWidth(context, 45),
-                    height: Dimensions().getHeight(context, 55),
-                    decoration: BoxDecoration(
-                      shape: BoxShape.rectangle,
-                      color: Colors.blueAccent,
-                    ),
-                    child: Stack(
-                      children: [
-                        Container(
-                          width: Dimensions().getWidth(context, 45),
-                          height: Dimensions().getHeight(context, 20),
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  // color: Colors.blueAccent,
+                ),
+                child: GridView.count(
+                  // Create a grid with 2 columns. If you change the scrollDirection to
+                  // horizontal, this produces 2 rows.
+
+                  scrollDirection: Axis.vertical,
+                  crossAxisSpacing: 5,
+                  mainAxisSpacing: 5,
+                  crossAxisCount: 2,
+                  children: List.generate(
+                    allItems.length,
+                    (index) {
+                      return GestureDetector(
+                        onTap: () {
+                          goTo(ItemListing(), context);
+                        },
+                        child: Container(
+                          alignment: Alignment.topRight,
+                          padding: EdgeInsets.fromLTRB(0.0, 5.0, 5.0, 0.0),
+                          width: Dimensions().getWidth(context, 90),
+                          height: Dimensions().getHeight(context, 40),
                           decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
                             image: DecorationImage(
@@ -88,30 +91,15 @@ class _ExplorePageState extends State<ExplorePage> {
                               const Radius.circular(10.0),
                             ),
                           ),
-                        ),
-                        Positioned(
-                          top: 10.0,
-                          right: 10.0,
                           child: Icon(
                             Icons.favorite_border_outlined,
                             color: Colors.black38,
                           ),
                         ),
-                        Positioned(
-                          bottom: 5.0,
-                          left: 5.0,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              TextThemeSheet().mediumText('House of Pau'),
-                              TextThemeSheet().smallText('Classic Chic wears'),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
+                      );
+                    },
                   ),
-                ],
+                ),
               ),
             ),
           ],

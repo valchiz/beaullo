@@ -168,28 +168,28 @@ class _SignUpFormState extends State<SignUpForm> {
           SizedBox(
             height: Dimensions().getHeight(context, 2),
           ),
-          TextFormField(
-            decoration: InputDecoration(
-                focusColor: Colors.green,
-                border: OutlineInputBorder(),
-                hintText: Translations().translate["signup confirmpassword"],
-                hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontSize: FontSet().mediumFontSize,
-                    fontFamily: FontSet().fontFamilyRegular)),
-            validator: (value) {
-              if (value.isEmpty) {
-                return 'Confirm password';
-              }
-              return null;
-            },
-            onSaved: (String value) {
-              formData['confirmPassword'] = value;
-            },
-          ),
-          SizedBox(
-            height: Dimensions().getHeight(context, 2),
-          ),
+          // TextFormField(
+          //   decoration: InputDecoration(
+          //       focusColor: Colors.green,
+          //       border: OutlineInputBorder(),
+          //       hintText: Translations().translate["signup confirmpassword"],
+          //       hintStyle: TextStyle(
+          //           color: Colors.grey,
+          //           fontSize: FontSet().mediumFontSize,
+          //           fontFamily: FontSet().fontFamilyRegular)),
+          //   validator: (value) {
+          //     if (value.isEmpty) {
+          //       return 'Confirm password';
+          //     }
+          //     return null;
+          //   },
+          //   onSaved: (String value) {
+          //     formData['confirmPassword'] = value;
+          //   },
+          // ),
+          // SizedBox(
+          //   height: Dimensions().getHeight(context, 2),
+          // ),
           DefaultButton(
             text: Translations().translate["create account"],
             press: () {

@@ -5,8 +5,9 @@ class CardLarge extends StatelessWidget {
   final String url;
   final String title;
   final double height;
+
   // final String subTitle;
-  CardLarge({this.url, this.title, @required this.height});
+  CardLarge({this.url, this.title = "", @required this.height});
 
   Widget build(BuildContext context) {
     return Container(

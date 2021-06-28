@@ -81,7 +81,26 @@ class Translations {
     //printing statements and report
     "date": "DD/MM/YYYY",
 
-    //searcg bar
+    //search bar
     "keyword": "Search",
+
+    //add to cart
+    "add to cart": "Add to Cart",
+
+    //buy now
+    "buy now": "Buy it now",
+
+    //make your dress
+    "make yours": "Let's make your fit:",
+
+    //take measurements
+    "length": "length",
+    "wrist": "wrist",
+    "hip": "hip",
+    "bust": "bust",
+    "waist": "waist",
+
+    //message now
+    "message now": "message now",
   };
 }
