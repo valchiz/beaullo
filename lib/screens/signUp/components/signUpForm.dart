@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/routes/pagesRoute.dart';
-import 'package:nawali/screens/getStarted/getStarted.dart';
-import 'package:nawali/screens/signUp/services/phoneAuth.dart';
-import 'package:nawali/screens/verification/verification.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/shared/widgets/default_button.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/routes/pagesRoute.dart';
+import 'package:beaullo/screens/getStarted/getStarted.dart';
+import 'package:beaullo/screens/signUp/services/phoneAuth.dart';
+import 'package:beaullo/screens/verification/verification.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/shared/widgets/default_button.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 import '../../dashboard/dashboard.dart';
 import '../../home/home.dart';
@@ -28,10 +28,12 @@ class _SignUpFormState extends State<SignUpForm> {
   @override
   Widget build(BuildContext context) {
     final Map<String, dynamic> formData = {
-      'firstname': null,
-      'lastname': null,
+      'fullname': null,
       'email': null,
+      'gender': null,
       'phoneNumber': null,
+      'password': null,
+      'confirmPassword': null,
     };
     return Form(
       key: widget.formKey,
@@ -40,41 +42,19 @@ class _SignUpFormState extends State<SignUpForm> {
           TextFormField(
             decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                hintText: Translations().translate["signup firstname"],
+                hintText: Translations().translate["signup fullname"],
                 hintStyle: TextStyle(
                     color: Colors.grey,
                     fontSize: FontSet().mediumFontSize,
                     fontFamily: FontSet().fontFamilyRegular)),
             validator: (value) {
               if (value.isEmpty) {
-                return 'Please enter first name';
+                return 'Please enter full name';
               }
               return null;
             },
             onSaved: (String value) {
-              formData['firstname'] = value;
-            },
-          ),
-          SizedBox(
-            height: Dimensions().getHeight(context, 2),
-          ),
-          TextFormField(
-            decoration: InputDecoration(
-                focusColor: Colors.green,
-                border: OutlineInputBorder(),
-                hintText: Translations().translate["signup lastname"],
-                hintStyle: TextStyle(
-                    color: Colors.grey,
-                    fontSize: FontSet().mediumFontSize,
-                    fontFamily: FontSet().fontFamilyRegular)),
-            validator: (value) {
-              if (value.isEmpty) {
-                return 'Please enter lastname';
-              }
-              return null;
-            },
-            onSaved: (String value) {
-              formData['lastname'] = value;
+              formData['fullname'] = value;
             },
           ),
           SizedBox(
@@ -97,6 +77,28 @@ class _SignUpFormState extends State<SignUpForm> {
             },
             onSaved: (String value) {
               formData['email'] = value;
+            },
+          ),
+          SizedBox(
+            height: Dimensions().getHeight(context, 2),
+          ),
+          TextFormField(
+            decoration: InputDecoration(
+                focusColor: Colors.green,
+                border: OutlineInputBorder(),
+                hintText: Translations().translate["signup gender"],
+                hintStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: FontSet().mediumFontSize,
+                    fontFamily: FontSet().fontFamilyRegular)),
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter gender';
+              }
+              return null;
+            },
+            onSaved: (String value) {
+              formData['gender'] = value;
             },
           ),
           SizedBox(
@@ -135,7 +137,7 @@ class _SignUpFormState extends State<SignUpForm> {
               var intValue = int.parse(value);
               print(intValue);
               var newValue = intValue.toString();
-              var phone = '+44' + newValue;
+              var phone = '+234' + newValue;
               print('phone here');
               print(phone);
               formData['phoneNumber'] = phone;
@@ -144,6 +146,50 @@ class _SignUpFormState extends State<SignUpForm> {
           SizedBox(
             height: Dimensions().getHeight(context, 2),
           ),
+          TextFormField(
+            decoration: InputDecoration(
+                focusColor: Colors.green,
+                border: OutlineInputBorder(),
+                hintText: Translations().translate["signup password"],
+                hintStyle: TextStyle(
+                    color: Colors.grey,
+                    fontSize: FontSet().mediumFontSize,
+                    fontFamily: FontSet().fontFamilyRegular)),
+            validator: (value) {
+              if (value.isEmpty) {
+                return 'Please enter password';
+              }
+              return null;
+            },
+            onSaved: (String value) {
+              formData['password'] = value;
+            },
+          ),
+          SizedBox(
+            height: Dimensions().getHeight(context, 2),
+          ),
+          // TextFormField(
+          //   decoration: InputDecoration(
+          //       focusColor: Colors.green,
+          //       border: OutlineInputBorder(),
+          //       hintText: Translations().translate["signup confirmpassword"],
+          //       hintStyle: TextStyle(
+          //           color: Colors.grey,
+          //           fontSize: FontSet().mediumFontSize,
+          //           fontFamily: FontSet().fontFamilyRegular)),
+          //   validator: (value) {
+          //     if (value.isEmpty) {
+          //       return 'Confirm password';
+          //     }
+          //     return null;
+          //   },
+          //   onSaved: (String value) {
+          //     formData['confirmPassword'] = value;
+          //   },
+          // ),
+          // SizedBox(
+          //   height: Dimensions().getHeight(context, 2),
+          // ),
           DefaultButton(
             text: Translations().translate["create account"],
             press: () {

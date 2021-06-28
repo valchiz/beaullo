@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/screens/dashboard/dashboard.dart';
-import 'package:nawali/screens/more/more.dart';
-import 'package:nawali/screens/payments/payments.dart';
-import 'package:nawali/screens/transferMoney/transfermoney.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/shared/widgets/circles.dart';
-import 'package:nawali/shared/components/navCard.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/screens/dashboard/dashboard.dart';
+import 'package:beaullo/screens/cart/cart.dart';
+import 'package:beaullo/screens/userProfile/userProfile.dart';
+import 'package:beaullo/screens/favorites/favorites.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class TabsPage extends StatelessWidget {
   @override
@@ -28,28 +26,27 @@ class TabsPage extends StatelessWidget {
                 text: Translations().translate["tab1"],
               ),
               Tab(
-                icon: Icon(Icons.payment),
+                icon: Icon(Icons.favorite),
                 text: Translations().translate["tab2"],
               ),
               Tab(
-                icon: Icon(Icons.transfer_within_a_station),
+                icon: Icon(Icons.shopping_bag),
                 text: Translations().translate["tab3"],
               ),
               Tab(
-                icon: Icon(Icons.more),
+                icon: Icon(Icons.person),
                 text: Translations().translate["tab4"],
               ),
             ],
           ),
           body: TabBarView(
             children: [
-              // Dashboard(
-              //   title: 'Dashboard',
-              // ),
-              // Payments(),
-              // TransferMoney(),
-              // // Center(child: Text('Transfers Content Here')),
-              // More(),
+              Dashboard(
+                title: 'Dashboard',
+              ),
+              Favorites(),
+              Cart(),
+              UserProfile(),
             ],
           ),
         ),

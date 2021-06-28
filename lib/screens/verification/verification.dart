@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/screens/signUp/services/phoneAuth.dart';
-import 'package:nawali/screens/verification/components/verificationForm.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/screens/signUp/services/phoneAuth.dart';
+import 'package:beaullo/screens/verification/components/verificationForm.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class Verification extends StatelessWidget {

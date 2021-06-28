@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 
 class ColorSet {
-  final Color primaryColor = Color(0xFF049DD9);
-  final Color secondaryColor = Color(0xFF085776);
+  // final Color primaryColor = Color(0xFF049DD9);
+  final Color primaryColor = Color(0xFF9370DB);
+  // final Color secondaryColor = Color(0xFF085776);
+  final Color secondaryColor = Color(0xFF9370DB);
   final Color tetiaryColor = Color(0xFFcbc526);
+  final Color grey = Colors.black38;
+  final Color black = Colors.black;
 }
 
 class FontSet {

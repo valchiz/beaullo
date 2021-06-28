@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class Circle2 extends StatelessWidget {
   final double radius;
@@ -14,11 +14,11 @@ class Circle2 extends StatelessWidget {
       // width: Dimensions().getWidth(context, 35),
       height: Dimensions().getHeight(context, radius),
       decoration: BoxDecoration(
-        // color: Colors.orange,
+        color: Colors.orange,
         shape: BoxShape.circle,
         image: DecorationImage(
           image: AssetImage(url),
-          fit: BoxFit.contain,
+          fit: BoxFit.cover,
         ),
       ),
     );

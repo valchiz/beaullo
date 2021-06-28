@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 import '../size_config.dart';
 
 class SecondaryButton extends StatelessWidget {
@@ -14,13 +14,17 @@ class SecondaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: Dimensions().getWidth(context, 100),
-      height: Dimensions().getHeight(context, 7),
-      child: OutlineButton(
-        onPressed: press,
-        color: ColorSet().primaryColor,
-        child: TextThemeSheet().regularButton2Text(text),
+    return Container(
+      child: SizedBox(
+        width: Dimensions().getWidth(context, 100),
+        height: Dimensions().getHeight(context, 7),
+        child: OutlinedButton(
+          onPressed: press,
+          child: TextThemeSheet().regularButton2Text(text),
+          style: OutlinedButton.styleFrom(
+            side: BorderSide(color: ColorSet().primaryColor),
+          ),
+        ),
       ),
     );
   }

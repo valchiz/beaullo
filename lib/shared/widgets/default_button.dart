@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 import '../size_config.dart';
 
 class DefaultButton extends StatelessWidget {
@@ -17,10 +17,13 @@ class DefaultButton extends StatelessWidget {
     return SizedBox(
       width: Dimensions().getWidth(context, 100),
       height: Dimensions().getHeight(context, 7),
-      child: RaisedButton(
+      child: ElevatedButton(
         onPressed: press,
-        color: ColorSet().primaryColor,
+        // color: ColorSet().primaryColor,
         child: TextThemeSheet().regularButton1Text(text),
+        style: ElevatedButton.styleFrom(
+          primary: ColorSet().primaryColor,
+        ),
       ),
     );
   }

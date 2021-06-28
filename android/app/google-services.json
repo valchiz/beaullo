@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563825392549",
+    "project_id": "beaullo-mobile",
+    "storage_bucket": "beaullo-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563825392549:android:e24fd9a354b891415fc64c",
+        "android_client_info": {
+          "package_name": "com.example.beaullo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563825392549-obooeke16v1t8etcb4pikileehsg8s3n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXw866xriKrdAvVRVNStMQ_0khYd-_8Sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563825392549-obooeke16v1t8etcb4pikileehsg8s3n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

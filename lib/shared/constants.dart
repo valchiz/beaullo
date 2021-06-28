@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/shared/size_config.dart';
+import 'package:beaullo/shared/size_config.dart';
 
 const kPrimaryColor = const Color(0xFF03045e);
 const kPrimaryLightColor = Color(0xFFFFECDF);

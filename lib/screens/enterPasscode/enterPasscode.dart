@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/screens/verification/components/verificationForm.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/screens/verification/components/verificationForm.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class EnterPasscode extends StatelessWidget {
   // Translations().translate["splash data"]

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/shared/size_config.dart';
-import 'package:nawali/shared/widgets/circles.dart';
-import 'package:nawali/shared/widgets/circles2.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/shared/size_config.dart';
+import 'package:beaullo/shared/widgets/circles.dart';
+import 'package:beaullo/shared/widgets/circles2.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class WalkthroughContent extends StatelessWidget {
   const WalkthroughContent({

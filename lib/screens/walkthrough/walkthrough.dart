@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/routes/pagesRoute.dart';
-import 'package:nawali/screens/getStarted/getStarted.dart';
-import 'package:nawali/shared/constants.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/shared/size_config.dart';
-import 'package:nawali/shared/widgets/default_button.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/routes/pagesRoute.dart';
+import 'package:beaullo/screens/getStarted/getStarted.dart';
+import 'package:beaullo/shared/constants.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/shared/widgets/default_button.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 import 'components/walkthroughContent.dart';
 
@@ -93,7 +92,8 @@ class _WalkthroughPageState extends State<WalkthroughPage> {
       height: 6,
       width: currentPage == index ? 20 : 6,
       decoration: BoxDecoration(
-        color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
+        // color: currentPage == index ? kPrimaryColor : Color(0xFFD8D8D8),
+        color: currentPage == index ? kPrimaryColor : Color(0xFF4B0082),
         borderRadius: BorderRadius.circular(3),
       ),
     );

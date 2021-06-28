@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/screens/forgotPassword/components/ForgotPasswordForm.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/screens/forgotPassword/components/ForgotPasswordForm.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   // Translations().translate["splash data"]

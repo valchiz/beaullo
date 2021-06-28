@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:nawali/routes/pagesRoute.dart';
-import 'package:nawali/screens/getStarted/getStarted.dart';
-import 'package:nawali/screens/signUp/signUp.dart';
-import 'package:nawali/shared/constants.dart';
-import 'package:nawali/shared/services/translationService.dart';
-import 'package:nawali/shared/size_config.dart';
-import 'package:nawali/shared/widgets/default_button.dart';
-import 'package:nawali/stylesheets/sheet.dart';
+import 'package:beaullo/routes/pagesRoute.dart';
+import 'package:beaullo/screens/getStarted/getStarted.dart';
+import 'package:beaullo/screens/signUp/signUp.dart';
+import 'package:beaullo/shared/constants.dart';
+import 'package:beaullo/shared/services/translationService.dart';
+import 'package:beaullo/shared/size_config.dart';
+import 'package:beaullo/shared/widgets/default_button.dart';
+import 'package:beaullo/stylesheets/sheet.dart';
 
 class EnterPasscodeForm extends StatefulWidget {
   final int value;
