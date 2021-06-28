@@ -81,7 +81,44 @@ class Translations {
     //printing statements and report
     "date": "DD/MM/YYYY",
 
-    //searcg bar
+    //search bar
     "keyword": "Search",
+
+    //add to cart
+    "add to cart": "Add to Cart",
+
+    //buy now
+    "buy now": "Buy it now",
+
+    //make your dress
+    "make yours": "Let's make your fit:",
+
+    //take measurements
+    "length": "length",
+    "wrist": "wrist",
+    "hip": "hip",
+    "bust": "bust",
+    "waist": "waist",
+
+    //message now
+    "message now": "message now",
+
+    //add address
+    "add address": "Add Address",
+
+    //total
+    "total": "Total",
+//address form
+    "country": "Country",
+    "state": "State",
+    "city": "City",
+    "houseAddress": "Street Address",
+    "postalCode": "Postal Code",
+    "submit": "Continue to checkout",
+    "enterAddress": "Enter your shipping Address",
+    "address desc": "Kindly fill out the form correctly",
+    "placeOrder": "Place Order",
+    "subTotal": "Sub Total",
+    "tax": "Tax",
   };
 }

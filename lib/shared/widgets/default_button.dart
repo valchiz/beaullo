@@ -17,10 +17,13 @@ class DefaultButton extends StatelessWidget {
     return SizedBox(
       width: Dimensions().getWidth(context, 100),
       height: Dimensions().getHeight(context, 7),
-      child: RaisedButton(
+      child: ElevatedButton(
         onPressed: press,
-        color: ColorSet().primaryColor,
+        // color: ColorSet().primaryColor,
         child: TextThemeSheet().regularButton1Text(text),
+        style: ElevatedButton.styleFrom(
+          primary: ColorSet().primaryColor,
+        ),
       ),
     );
   }

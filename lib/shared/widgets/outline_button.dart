@@ -14,13 +14,17 @@ class SecondaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: Dimensions().getWidth(context, 100),
-      height: Dimensions().getHeight(context, 7),
-      child: OutlineButton(
-        onPressed: press,
-        color: ColorSet().primaryColor,
-        child: TextThemeSheet().regularButton2Text(text),
+    return Container(
+      child: SizedBox(
+        width: Dimensions().getWidth(context, 100),
+        height: Dimensions().getHeight(context, 7),
+        child: OutlinedButton(
+          onPressed: press,
+          child: TextThemeSheet().regularButton2Text(text),
+          style: OutlinedButton.styleFrom(
+            side: BorderSide(color: ColorSet().primaryColor),
+          ),
+        ),
       ),
     );
   }
