@@ -1,9 +1,8 @@
-import 'package:beaullo/shared/components/navCard.dart';
-import 'package:beaullo/shared/components/navCard2.dart';
+import 'package:beaullo/routes/pagesRoute.dart';
+import 'package:beaullo/screens/cart/cart.dart';
 import 'package:beaullo/stylesheets/sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:beaullo/screens/explorePage/services/mockData.dart';
-import 'package:beaullo/screens/dashboard/components/cardLarge.dart';
 import 'package:beaullo/screens/dashboard/components/searchBar.dart';
 import 'package:beaullo/shared/widgets/header.dart';
 import 'package:beaullo/shared/widgets/default_button.dart';
@@ -30,23 +29,28 @@ class _ItemListingState extends State<ItemListing> {
             SizedBox(
               height: Dimensions().getHeight(context, 4),
             ),
-            // Icon(Icons.menu),
             Row(
               children: [
-                Header(title: 'Beaullo'),
-                SizedBox(
-                  width: Dimensions().getWidth(context, 3),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(Icons.arrow_back_ios),
                 ),
-                SearchBar(),
+                SizedBox(
+                  width: Dimensions().getWidth(context, 25),
+                ),
+                Header(title: 'Explore'),
               ],
             ),
-            // Divider(),
+            SearchBar(),
             Expanded(
               child: ListView(
                 children: [
                   Container(
                     width: Dimensions().getWidth(context, 100),
                     height: Dimensions().getHeight(context, 40),
+                    // margin: EdgeInsets.fromLTRB(0.0, 0.0, 10.0, 0.0),
                     decoration: BoxDecoration(
                       shape: BoxShape.rectangle,
                     ),
@@ -60,12 +64,38 @@ class _ItemListingState extends State<ItemListing> {
                               return Row(
                                 children: [
                                   Container(
-                                    margin: EdgeInsets.all(5),
-                                    child: CardLarge(
-                                      height: 40,
-                                      url: allItems[index]['url'],
+                                    alignment: Alignment.topRight,
+                                    padding: EdgeInsets.all(15),
+                                    width: Dimensions().getWidth(context, 90),
+                                    height: Dimensions().getHeight(context, 40),
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.rectangle,
+                                      image: DecorationImage(
+                                        image:
+                                            AssetImage(allItems[index]["url"]),
+                                        fit: BoxFit.cover,
+                                      ),
+                                      borderRadius: const BorderRadius.all(
+                                        const Radius.circular(10.0),
+                                      ),
+                                    ),
+                                    child: Container(
+                                      width: Dimensions().getWidth(context, 10),
+                                      height:
+                                          Dimensions().getHeight(context, 10),
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                      ),
+                                      child: Icon(
+                                        Icons.favorite_border_outlined,
+                                        color: Colors.black38,
+                                      ),
                                     ),
                                   ),
+                                  SizedBox(
+                                    width: Dimensions().getWidth(context, 3),
+                                  )
                                 ],
                               );
                             },
@@ -223,7 +253,16 @@ class _ItemListingState extends State<ItemListing> {
                                     height: Dimensions().getHeight(context, 2),
                                   ),
                                   TextThemeSheet().smallText(
-                                      explore["brandRepresentative"]),
+                                    explore["brandRepresentative"],
+                                  ),
+                                  SizedBox(
+                                    height: Dimensions().getHeight(context, 2),
+                                  ),
+                                  AdjustableButton(
+                                    width: 40.0,
+                                    height: 4.0,
+                                    text: "Message us",
+                                  )
                                 ],
                               ),
                             ),
@@ -339,85 +378,82 @@ class _ItemListingState extends State<ItemListing> {
                     ),
                     child: Column(
                       children: [
-                        Row(
-                          children: [
-                            Container(
-                              padding: EdgeInsets.all(15),
-                              alignment: Alignment.topLeft,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Row(
-                                    children: [
-                                      TextThemeSheet().mediumText("Reviews"),
-                                      SizedBox(
-                                        width:
-                                            Dimensions().getWidth(context, 50),
-                                      ),
-                                      Icon(
-                                        Icons.arrow_forward_ios,
-                                        color: ColorSet().primaryColor,
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: Dimensions().getHeight(context, 2),
-                                  ),
-                                  Row(
-                                    children: [
-                                      TextThemeSheet().smallText(
-                                        explore["estimatedArrival"],
-                                      ),
-                                      SizedBox(
-                                        width:
-                                            Dimensions().getWidth(context, 20),
-                                      ),
-                                      TextThemeSheet().smallText(
-                                        explore["deliveryCost"],
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: Dimensions().getHeight(context, 2),
-                                  ),
-                                  Row(
-                                    children: [
-                                      TextThemeSheet().mediumText(
-                                        "14 August, 2021",
-                                      ),
-                                      SizedBox(
-                                        width:
-                                            Dimensions().getWidth(context, 15),
-                                      ),
-                                      TextThemeSheet().mediumText(
-                                        "\$5000",
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: Dimensions().getHeight(context, 3),
-                                  ),
-                                  Row(
-                                    children: [
-                                      TextThemeSheet().smallText(
-                                        explore["returnExchange"],
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: Dimensions().getHeight(context, 2),
-                                  ),
-                                  Row(
-                                    children: [
-                                      TextThemeSheet().mediumText(
-                                        "Accepted",
-                                      ),
-                                    ],
-                                  ),
-                                ],
+                        Container(
+                          padding: EdgeInsets.all(15),
+                          child: Row(
+                            children: [
+                              TextThemeSheet().mediumText("Reviews"),
+                              SizedBox(
+                                width: Dimensions().getWidth(context, 55),
                               ),
-                            ),
-                          ],
+                              Icon(
+                                Icons.arrow_forward_ios,
+                                color: ColorSet().primaryColor,
+                              ),
+                            ],
+                          ),
+                        ),
+                        Column(
+                          children: List.generate(allReviews.length, (index) {
+                            return Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.all(15),
+                                  alignment: Alignment.topLeft,
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      SizedBox(
+                                        height:
+                                            Dimensions().getHeight(context, 2),
+                                      ),
+                                      Row(
+                                        children: [
+                                          TextThemeSheet().mediumText(
+                                            allReviews[index]['date'],
+                                          )
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height:
+                                            Dimensions().getHeight(context, 2),
+                                      ),
+                                      Row(
+                                        children: [
+                                          TextThemeSheet().smallText(
+                                            "By" +
+                                                " " +
+                                                allReviews[index]
+                                                    ["customerName"],
+                                          ),
+                                          SizedBox(
+                                            width: Dimensions()
+                                                .getWidth(context, 30),
+                                          ),
+                                          TextThemeSheet().smallText(
+                                            allReviews[index]["date"],
+                                          ),
+                                        ],
+                                      ),
+                                      SizedBox(
+                                        height:
+                                            Dimensions().getHeight(context, 3),
+                                      ),
+                                      Container(
+                                        width:
+                                            Dimensions().getWidth(context, 80),
+                                        child: TextThemeSheet().smallText(
+                                          allReviews[index]["desc"],
+                                        ),
+                                      ),
+                                      Divider(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            );
+                          }),
                         ),
                       ],
                     ),
@@ -425,11 +461,111 @@ class _ItemListingState extends State<ItemListing> {
                   SizedBox(
                     height: Dimensions().getHeight(context, 4),
                   ),
+                  Container(
+                    child: Row(
+                      children: [
+                        TextThemeSheet().mediumText("More from this Brand"),
+                        SizedBox(
+                          width: Dimensions().getWidth(context, 10),
+                        ),
+                        TextThemeSheet().smallText("See more"),
+                        Icon(
+                          Icons.arrow_forward_ios,
+                          color: ColorSet().primaryColor,
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(
+                    height: Dimensions().getHeight(context, 2),
+                  ),
+                  Container(
+                    width: Dimensions().getWidth(context, 100),
+                    height: Dimensions().getHeight(context, 30),
+                    decoration: BoxDecoration(
+                      shape: BoxShape.rectangle,
+                      // color: Colors.amberAccent,
+                    ),
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      children: List.generate(allItems.length, (index) {
+                        return Container(
+                          margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 0.0),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.rectangle,
+                            boxShadow: [],
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                alignment: Alignment.topRight,
+                                padding:
+                                    EdgeInsets.fromLTRB(0.0, 0.0, 7.0, 0.0),
+                                width: Dimensions().getWidth(context, 45),
+                                height: Dimensions().getHeight(context, 20),
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.rectangle,
+                                  image: DecorationImage(
+                                    image: AssetImage(allItems[index]["url"]),
+                                    fit: BoxFit.cover,
+                                  ),
+                                  borderRadius: const BorderRadius.all(
+                                    const Radius.circular(10.0),
+                                  ),
+                                ),
+                                child: Container(
+                                  width: Dimensions().getWidth(context, 10),
+                                  height: Dimensions().getHeight(context, 10),
+                                  decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    color: Colors.white,
+                                  ),
+                                  child: Icon(
+                                    Icons.favorite_border_outlined,
+                                    color: Colors.black38,
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                margin: EdgeInsets.all(10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    TextThemeSheet()
+                                        .smallText(allItems[index]["title"]),
+                                    Row(
+                                      children: [
+                                        TextThemeSheet().mediumText(
+                                            allItems[index]["price"]),
+                                        SizedBox(
+                                          width: Dimensions()
+                                              .getWidth(context, 12),
+                                        ),
+                                        Icon(
+                                          Icons.shopping_bag_outlined,
+                                          color: Colors.red,
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
+
+                  SizedBox(
+                    height: Dimensions().getHeight(context, 4),
+                  ),
                   DefaultButton(
                     text: Translations().translate["add to cart"],
                     press: () {
                       // setUserFirstTime();
-                      // goTo(CartPage(), context);
+                      goTo(Cart(), context);
                     },
                   ),
                   SizedBox(

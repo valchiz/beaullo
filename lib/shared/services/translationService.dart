@@ -102,5 +102,23 @@ class Translations {
 
     //message now
     "message now": "message now",
+
+    //add address
+    "add address": "Add Address",
+
+    //total
+    "total": "Total",
+//address form
+    "country": "Country",
+    "state": "State",
+    "city": "City",
+    "houseAddress": "Street Address",
+    "postalCode": "Postal Code",
+    "submit": "Continue to checkout",
+    "enterAddress": "Enter your shipping Address",
+    "address desc": "Kindly fill out the form correctly",
+    "placeOrder": "Place Order",
+    "subTotal": "Sub Total",
+    "tax": "Tax",
   };
 }

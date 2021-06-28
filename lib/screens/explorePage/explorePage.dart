@@ -1,10 +1,10 @@
-import 'package:beaullo/screens/explorePage/services/mockData.dart';
 import 'package:flutter/material.dart';
 // import 'package:beaullo/shared/services/translationService.dart';
 import 'package:beaullo/stylesheets/sheet.dart';
 import 'package:beaullo/screens/dashboard/components/searchBar.dart';
 import 'package:beaullo/shared/widgets/header.dart';
 import 'package:beaullo/screens/explorePage/widgets/itemListing.dart';
+import 'package:beaullo/screens/explorePage/services/mockData.dart';
 
 import '../../routes/pagesRoute.dart';
 import '../../stylesheets/sheet.dart';
@@ -31,25 +31,33 @@ class _ExplorePageState extends State<ExplorePage> {
             SizedBox(
               height: Dimensions().getHeight(context, 4),
             ),
-            // Icon(Icons.menu),
             Row(
               children: [
-                Header(title: 'Beaullo'),
-                SizedBox(
-                  width: Dimensions().getWidth(context, 3),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: Icon(Icons.arrow_back_ios),
                 ),
-                SearchBar(),
+                SizedBox(
+                  width: Dimensions().getWidth(context, 25),
+                ),
+                Header(title: 'Explore'),
               ],
             ),
-            Divider(),
+            // Divider(),
+            SearchBar(),
+            SizedBox(
+              height: Dimensions().getHeight(context, 2),
+            ),
             Container(
               width: Dimensions().getWidth(context, 100),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   TextThemeSheet().smallText("49 results"),
                   SizedBox(
-                    height: Dimensions().getHeight(context, 2),
+                    width: Dimensions().getWidth(context, 65),
                   ),
                   Icon(Icons.filter_list_outlined),
                 ],
@@ -78,22 +86,30 @@ class _ExplorePageState extends State<ExplorePage> {
                         },
                         child: Container(
                           alignment: Alignment.topRight,
-                          padding: EdgeInsets.fromLTRB(0.0, 5.0, 5.0, 0.0),
+                          padding: EdgeInsets.fromLTRB(0.0, 0.0, 7.0, 0.0),
                           width: Dimensions().getWidth(context, 90),
                           height: Dimensions().getHeight(context, 40),
                           decoration: BoxDecoration(
                             shape: BoxShape.rectangle,
                             image: DecorationImage(
-                              image: AssetImage('assets/images/woman.jpg'),
+                              image: AssetImage(allItems[index]["url"]),
                               fit: BoxFit.cover,
                             ),
                             borderRadius: const BorderRadius.all(
                               const Radius.circular(10.0),
                             ),
                           ),
-                          child: Icon(
-                            Icons.favorite_border_outlined,
-                            color: Colors.black38,
+                          child: Container(
+                            width: Dimensions().getWidth(context, 10),
+                            height: Dimensions().getHeight(context, 10),
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                            ),
+                            child: Icon(
+                              Icons.favorite_border_outlined,
+                              color: Colors.black38,
+                            ),
                           ),
                         ),
                       );

@@ -10,23 +10,24 @@ class AdjustableButton extends StatelessWidget {
     this.press,
     this.width,
     this.height,
-    this.radius,
+    // this.radius,
   }) : super(key: key);
   final String text;
   final Function press;
   final double width;
   final double height;
-  final double radius;
+  // final double radius;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       color: ColorSet().primaryColor,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(
-          Radius.circular(radius),
-        ),
-      ),
+      // decoration: BoxDecoration(
+      //   shape: BoxShape.rectangle,
+      //   borderRadius: BorderRadius.all(
+      //     Radius.circular(2.0),
+      //   ),
+      // ),
       child: SizedBox(
         width: Dimensions().getWidth(context, width),
         height: Dimensions().getHeight(context, height),

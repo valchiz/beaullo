@@ -9,7 +9,11 @@ class CardsInterface {
       subTitle,
       deliveryCost,
       returnExchange,
-      estimatedArrival;
+      estimatedArrival,
+      customerName,
+      date,
+      categories,
+      reviewTitle;
 
   const CardsInterface({
     this.url,
@@ -23,6 +27,10 @@ class CardsInterface {
     this.estimatedArrival,
     this.deliveryCost,
     this.returnExchange,
+    this.customerName,
+    this.date,
+    this.reviewTitle,
+    this.categories,
   });
 }
 
@@ -38,6 +46,9 @@ final Map<String, dynamic> explore = {
   "estimatedArrival": "Estimated Arrival",
   "deliveryCost": "Cost of Delivery",
   "returnExchange": "Return and Exchange",
+  // "reviewTitle": "Amazing Fabrics",
+  // "customerName": "Sanjay Craig",
+  // "date": "12 Jun 2021",
 };
 List<dynamic> allItems = [
   {
@@ -47,6 +58,7 @@ List<dynamic> allItems = [
     "price": "\$342",
     "brandName": '21 Streetz',
     "brandRepresentative": "Joseph Noah",
+    "categories": "Casual",
   },
   {
     "url": 'assets/images/woman.jpg',
@@ -55,6 +67,7 @@ List<dynamic> allItems = [
     "price": "\$342",
     "brandName": '21 Streetz',
     "brandRepresentative": "Joseph Noah",
+    "categories": "Dinner",
   },
   {
     "url": 'assets/images/woman.jpg',
@@ -63,5 +76,22 @@ List<dynamic> allItems = [
     "price": "\$342",
     "brandName": '21 Streetz',
     "brandRepresentative": "Joseph Noah",
+    "categories": "Weddings",
   }
+];
+List<dynamic> allReviews = [
+  {
+    "reviewTitle": "Amazing Fabrics",
+    "customerName": "Sanjay Craig",
+    "date": "12 Jun 2021",
+    "desc":
+        "Freshly finessed outfit made with love just for you. There is absolutely no way you wouldn't slay with this. It's also soothing to every ocassion. ",
+  },
+  {
+    "reviewTitle": "Incredible Finishing",
+    "customerName": "Remy ma",
+    "date": "28 Jun 2021",
+    "desc":
+        "Freshly finessed outfit made with love just for you. There is absolutely no way you wouldn't slay with this. It's also soothing to every ocassion. ",
+  },
 ];
