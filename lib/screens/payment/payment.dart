@@ -89,7 +89,7 @@ class Payment extends StatelessWidget {
                       Translations().translate["total"],
                     ),
                     SizedBox(
-                      width: Dimensions().getWidth(context, 55),
+                      width: Dimensions().getWidth(context, 58),
                     ),
                     TextThemeSheet().mediumText("\$7,500"),
                   ],
