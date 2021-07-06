@@ -1,3 +1,5 @@
+import 'package:beaullo/authentication/auth.dart';
+import 'package:beaullo/screens/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:beaullo/routes/pagesRoute.dart';
 import 'package:beaullo/screens/getStarted/getStarted.dart';
@@ -25,6 +27,9 @@ class SignUpForm extends StatefulWidget {
 }
 
 class _SignUpFormState extends State<SignUpForm> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  Auth auth = Auth();
   @override
   Widget build(BuildContext context) {
     final Map<String, dynamic> formData = {
@@ -61,6 +66,7 @@ class _SignUpFormState extends State<SignUpForm> {
             height: Dimensions().getHeight(context, 2),
           ),
           TextFormField(
+            controller: emailController,
             decoration: InputDecoration(
                 focusColor: Colors.green,
                 border: OutlineInputBorder(),
@@ -147,6 +153,7 @@ class _SignUpFormState extends State<SignUpForm> {
             height: Dimensions().getHeight(context, 2),
           ),
           TextFormField(
+            controller: passwordController,
             decoration: InputDecoration(
                 focusColor: Colors.green,
                 border: OutlineInputBorder(),
@@ -192,7 +199,9 @@ class _SignUpFormState extends State<SignUpForm> {
           // ),
           DefaultButton(
             text: Translations().translate["create account"],
-            press: () {
+            press: () async{
+
+              await auth.signUp(email: emailController.text, password: passwordController.text);
               // if (widget.formKey.currentState.validate()) {
               //   widget.formKey.currentState.save(); //onSaved is called!
               //   print(formData);
@@ -202,7 +211,7 @@ class _SignUpFormState extends State<SignUpForm> {
               //       userForm: formData,
               //     ),
               //     context);
-              goTo(TabsPage(), context);
+              goTo(LoginPage(), context);
               // }
 
               // setUserFirstTime();

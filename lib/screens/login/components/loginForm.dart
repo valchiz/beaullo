@@ -1,3 +1,5 @@
+import 'package:beaullo/authentication/auth.dart';
+import 'package:beaullo/screens/dashboard/dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:beaullo/routes/pagesRoute.dart';
 import 'package:beaullo/screens/forgotPassword/forgotPassword.dart';
@@ -22,6 +24,9 @@ class LoginForm extends StatefulWidget {
 }
 
 class _LoginFormState extends State<LoginForm> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  Auth auth = Auth();
   @override
   Widget build(BuildContext context) {
     final Map<String, dynamic> formData = {
@@ -34,6 +39,7 @@ class _LoginFormState extends State<LoginForm> {
       child: Column(
         children: [
           TextFormField(
+            controller: emailController,
             decoration: InputDecoration(
                 border: OutlineInputBorder(),
                 hintText: Translations().translate["login email"],
@@ -55,6 +61,7 @@ class _LoginFormState extends State<LoginForm> {
             height: Dimensions().getHeight(context, 2),
           ),
           TextFormField(
+            controller: passwordController,
             decoration: InputDecoration(
                 focusColor: Colors.green,
                 border: OutlineInputBorder(),
@@ -94,9 +101,10 @@ class _LoginFormState extends State<LoginForm> {
           ),
           DefaultButton(
             text: Translations().translate["create account"],
-            press: () {
+            press: () async{
+              await auth.signIn(email: emailController.text, password: passwordController.text);
               // setUserFirstTime();
-              goToReplacement(GetStartedPage(), context);
+              goToReplacement(Dashboard(), context);
             },
           ),
           SizedBox(
